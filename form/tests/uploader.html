@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 5//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<title>Test dojox.form.Uploader</title>
+	<link href="/dijit/themes/tundra/tundra.css" media="screen" rel="stylesheet" type="text/css" >
+	<script src="/dojo/dojo.js" data-dojo-config="cacheBust: true"></script>
+	<script>
+		require(["crm/app", "dojo/parser", "dojo/ready", "dojox/form/Uploader", "dojox/form/uploader/plugins/Flash", "dojo/domReady!"], function(app, parser, ready, uploader){
+			ready(function(){
+				parser.parse().then(function() {
+					app.init();
+				});
+			});
+		});
+	</script>
+</head>
+<body class="tundra">
+
+
+<form method="post" action="UploadFile.php" id="myForm" enctype="multipart/form-data" >
+	<fieldset>
+		<legend>Form Post Test</legend>
+		<input class="browseButton" name="uploadedfile" multiple="true" type="file" dojoType="dojox/form/Uploader" label="Select Some Files" id="uploader">
+		<input type="button" id="remBtn" label="Clear" dojoType="dijit/form/Button" />
+		<input type="submit" label="Submit" dojoType="dijit/form/Button" />
+		<div id="files" dojoType="dojox/form/uploader/FileList" uploaderId="uploader"></div>
+	</fieldset>
+</form>
+
+</body>
+</html>

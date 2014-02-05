@@ -1,0 +1,11 @@
+{
+	"name": "core",
+	"version":"0.1.2",
+	"main":"main",
+	"dependencies": {
+		"dojo":"1.9.0"
+	},
+	"description": "SimpleSoft Core",
+	"homepage": "http://www.simplesoft.pl/",
+	"dojoBuild": "core.profile.js"
+}
